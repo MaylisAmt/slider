@@ -1,7 +1,7 @@
  const sliderData = [
   {
     id: 1,
-    description: "Leaving room"
+    description: "Living room"
   },
   {
     id: 2,
