@@ -1,0 +1,14 @@
+.index-number {
+    text-align: center;
+    color: #fff;
+    margin: 115px 0 25px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.slider {
+    max-width: 600px;
+    aspect-ratio: 3/2; /* Permet de conserver des dimensions proportionnelles où width et height sont calculés automatiquement */
+    margin: 0 auto;
+    position: relative;
+}
