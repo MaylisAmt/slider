@@ -12,3 +12,80 @@
     margin: 0 auto;
     position: relative;
 }
+
+.image-description {
+    position: absolute;
+    z-index: 1; /* z-order détermine l'ordre des différentes couches que formeront les éléments. Si un z-index est supérieur, il couvrira un élément qui a un z-index inférieur. Ici permet que le texte se place au dessus de l'image */
+    right: 0; /* Positionne le texte à droite */
+    color: #111;
+    background-color: honeydew;
+    border-radius: 2px;
+    border-bottom: solid grey;
+    border-left: solid grey;
+    padding: 5px 3px;
+    font-weight: 400;
+}
+
+.slider-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navigation-button-previous, .navigation-button-next {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; /* Rend l'image ronde */
+    background-color: transparent;
+    border: 2px solid white;
+    top: 50%;
+    transform: translateY(-50%); /* Permet de bien centrer verticalement les boutons */
+    cursor: pointer;
+    display: flex; /* Ici le flex est utilisé pour bien centrer la flèche à l'intérieur du cercle. En inline il serait légèrement décalé */
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navigation-button-previous:hover, .navigation-button-next:hover {
+    background-color: slategray;
+    opacity: 0.6;
+}
+
+.navigation-button-previous {
+    left: -100px; /* Décale le bouton de 100px vers la gauche de son parent */
+}
+
+.navigation-button-next {
+    right: -100px; /* Décale le bouton de 100px vers la droite de son parent */
+}
+
+.navigation-button-next img, .navigation-button-previous img {
+    width: 10px;    
+}
+
+/* Responsive. Break point. Quand on passe sous 850 en largeur de fenêtre, on adapte avec le style suivant : */
+
+@media (max-width: 850px) {
+    .index-number {
+        font-size: 14px;
+    }
+    .slider {
+        max-width: 350px;
+    }
+    .navigation-button-next, .navigation-button-previous {
+        width: 25px;
+        height: 25px;
+    }
+    .navigation-button-next img, .navigation-button-previous img {
+        width: 12px;
+    }
+    .navigation-button-next {
+        right: -75px;
+    }
+    .navigation-button-previous {
+        left: -75px;
+    }
+}
